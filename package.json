@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lugosieben/urlshortener/issues"
   },
-  "homepage": "https://github.com/lugosieben/urlshortener#readme"
+  "homepage": "https://github.com/lugosieben/urlshortener#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
