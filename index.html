@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporary URL Shortener</title>
+</head>
+<body>
+    Redirect to: <input id="url-in" type="text" value="https://">
+    <br>
+    URL: url.ehd.lol/<input id="name-in" type="text">
+    <br>
+    <button id="btn-confirm">Generate</button>
+
+    <script>
+        var note = "Successful generation. Your shortened URL will expire in 30 minutes.<br>"
+        document.getElementById('btn-confirm').addEventListener('click', (e) => {
+            var name = document.getElementById('name-in').value
+            var url = document.getElementById('url-in').value
+
+            if (name && url) {
+                window.location.href = "./cr-url?name=/"+name+"&url="+url
+            }
+        })
+    </script>
+
+</body>
+</html>
