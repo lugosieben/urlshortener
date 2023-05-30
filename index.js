@@ -24,9 +24,9 @@ app.get('/cr-url', function(req,res) {
     if (!urls[name]) {
         urls[name] = url
     }else{
-        return res.send('This URL is already in use. Please choose another one or wait for this URL to get cleared.')
+        return res.send('This URL is already in use. Please choose another one or wait for this URL to get cleared. <a href="./">Go back</a>')
     }
-    res.send(note+'https://url.ehd.lol'+name)
+    res.send(note+'<a href="https://url.ehd.lol'+name+'">https://url.ehd.lol'+name+'</a>')
     setTimeout(function(){urls[name] = false}, 1800000)
 })
 
